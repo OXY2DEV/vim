@@ -12,10 +12,10 @@ syn sync fromstart
 " Option """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Format: `<option_name> ...`<
 
-syn match kittyString /\S\+/ contains=Alpha contained
+syn match kittyString /\S\+/ contains=kittyAlpha contained
 syn match kittyNumber /[+\-*\/]\{0,1}[0-9.]\+/ contained
 syn match kittyAlpha /@[0-9.]\+/ contained
-syn match kittyColor /#[0-9a-fA-F]\{3,6}/ nextgroup=Alpha contained
+syn match kittyColor /#[0-9a-fA-F]\{3,6}/ nextgroup=kittyAlpha contained
 syn keyword kittyBoolean contained yes no
 syn keyword kittyConstant contained none auto monospace bold italic ratio always never
 
@@ -89,7 +89,7 @@ hi link kittyBoolean Boolean
 hi link kittyConstant Constant
 
 hi link kittyFlag Constant
-hi link kittyParameter Specual
+hi link kittyParameter Special
 
 hi link kittyOptionName Keyword
 hi link kittyModName Keyword
